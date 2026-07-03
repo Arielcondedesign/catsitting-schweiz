@@ -5,6 +5,8 @@
 @import "@fontsource/dm-serif-display/400.css";
 @import "@fontsource/dm-serif-display/400-italic.css";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "Inter", system-ui, sans-serif;
   --font-serif: "DM Serif Display", Georgia, serif;
@@ -25,12 +27,25 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 body {
   background: var(--color-primary-50);
   color: var(--color-primary-950);
   font-family: var(--font-sans);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.dark body {
+  background: var(--color-primary-950);
+  color: var(--color-primary-50);
 }
 
 h1,
@@ -55,4 +70,9 @@ a:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--color-primary-800);
   outline-offset: 2px;
+}
+
+.dark a:focus-visible,
+.dark button:focus-visible {
+  outline: 2px solid var(--color-primary-300);
 }

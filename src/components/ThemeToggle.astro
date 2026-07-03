@@ -1,0 +1,62 @@
+---
+---
+
+<button
+  id="theme-toggle"
+  type="button"
+  aria-label="Theme wechseln"
+  class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary-300 text-primary-700 transition hover:border-primary-950 hover:text-primary-950 dark:border-primary-700 dark:text-primary-300 dark:hover:border-primary-50 dark:hover:text-primary-50"
+>
+  <svg
+    class="theme-toggle-sun h-5 w-5"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <circle cx="12" cy="12" r="4"></circle>
+    <path
+      d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+    ></path>
+  </svg>
+  <svg
+    class="theme-toggle-moon hidden h-5 w-5"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+  </svg>
+</button>
+
+<script>
+  function initThemeToggle() {
+    const button = document.getElementById("theme-toggle");
+    const sunIcon = button?.querySelector(".theme-toggle-sun");
+    const moonIcon = button?.querySelector(".theme-toggle-moon");
+
+    function syncIcon() {
+      const isDark = document.documentElement.classList.contains("dark");
+      sunIcon?.classList.toggle("hidden", isDark);
+      moonIcon?.classList.toggle("hidden", !isDark);
+    }
+
+    syncIcon();
+
+    button?.addEventListener("click", () => {
+      const isDark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      syncIcon();
+    });
+  }
+
+  initThemeToggle();
+  document.addEventListener("astro:after-swap", initThemeToggle);
+</script>
