@@ -1,0 +1,223 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ReviewCard from "../components/ReviewCard.astro";
+
+const reviews = [
+  {
+    name: "Leyla",
+    location: "Terrassa, Spanien",
+    dates: "21. Dez. 2024 – 11. Jan. 2025",
+    duration: "3 Wochen · über Weihnachten & Neujahr",
+    quote:
+      "Es war grossartig, Ariel als Sitter für Mara und Curro zu haben. Die Kommunikation war sehr gut, wir mussten uns um nichts sorgen.",
+  },
+  {
+    name: "Blanca",
+    location: "Luxemburg",
+    dates: "23. Aug. – 10. Sep. 2024",
+    duration: "fast 3 Wochen",
+    quote:
+      "Die Kommunikation war jederzeit einfach, und die Katzen wurden gut versorgt. Man merkt seine Erfahrung mit Katzen — sogar meine scheue Katze Luna hat sich schnell an ihn gewöhnt.",
+  },
+  {
+    name: "Julia",
+    location: "Sheffield, UK",
+    dates: "13. – 21. Aug. 2024",
+    duration: "1 Woche · 2 Hunde + 1 Katze",
+    quote:
+      "Ariel ist ein liebenswürdiger Mensch. Er hat sich um unsere zwei Hunde — einer davon reaktiv gegenüber anderen Hunden — und unsere Katze gekümmert. Wir haben uns vorher getroffen und uns sofort wohlgefühlt.",
+  },
+  {
+    name: "Andrew",
+    location: "Biarritz, Frankreich",
+    dates: "8. – 11. Nov. 2024",
+    duration: "Kurzaufenthalt",
+    quote:
+      "Wie immer grossartig! Perfekte Kommunikation und Updates, während ich weg war. Das Haus war blitzblank, als ich zurückkam.",
+  },
+];
+---
+
+<Layout
+  title="Katzensitting Schweiz — verifizierter Housesitter für längere Aufenthalte | Ariel"
+  description="Verifizierter Housesitter mit 4 Jahren Erfahrung und über 10 geprüften Bewertungen, spezialisiert auf Katzenbetreuung bei Aufenthalten ab einem Monat. Basis Costa Brava, reisebereit in die ganze Schweiz."
+>
+  <Header />
+
+  <section class="mx-auto max-w-5xl px-4 pt-16 pb-20 sm:px-6 sm:pt-24 sm:pb-28 lg:px-8">
+    <p class="font-medium tracking-wide text-primary-600 uppercase text-sm">
+      Katzensitting Schweiz
+    </p>
+    <h1 class="mt-4 max-w-3xl text-4xl sm:text-6xl">
+      Ihre Katzen zuhause, gut betreut — auch bei Aufenthalten von mehreren Wochen.
+    </h1>
+    <p class="mt-6 max-w-xl text-lg text-primary-700">
+      Ich bin Ariel, verifizierter Housesitter mit 4 Jahren Erfahrung und Spezialisierung auf
+      Katzen. 10 geprüfte Bewertungen, eine davon über einen vollen Monat — Kommunikation,
+      Zuverlässigkeit und ein Zuhause, das genauso aussieht, wie Sie es verlassen haben.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a
+        href="#kontakt"
+        class="rounded-full bg-primary-950 px-6 py-3 text-sm font-medium text-primary-50 transition hover:bg-primary-800"
+      >
+        Für Ihren Sit anfragen
+      </a>
+      <a
+        href="#bewertungen"
+        class="rounded-full border border-primary-300 px-6 py-3 text-sm font-medium text-primary-800 transition hover:border-primary-950"
+      >
+        Bewertungen lesen
+      </a>
+    </div>
+
+    <dl class="mt-16 grid grid-cols-2 gap-8 border-t border-primary-200 pt-10 sm:grid-cols-4">
+      <div>
+        <dt class="text-sm text-primary-600">Erfahrung</dt>
+        <dd class="mt-1 text-2xl">4 Jahre</dd>
+      </div>
+      <div>
+        <dt class="text-sm text-primary-600">Verifizierte Bewertungen</dt>
+        <dd class="mt-1 text-2xl">10</dd>
+      </div>
+      <div>
+        <dt class="text-sm text-primary-600">Längster Sit</dt>
+        <dd class="mt-1 text-2xl">4 Wochen</dd>
+      </div>
+      <div>
+        <dt class="text-sm text-primary-600">Spezialisierung</dt>
+        <dd class="mt-1 text-2xl">Katzen</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="bg-primary-950 text-primary-50">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <p class="text-sm font-medium tracking-wide text-primary-300 uppercase">
+        Erfahrung mit längeren Aufenthalten
+      </p>
+      <div class="mt-6 grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+        <blockquote class="text-2xl leading-relaxed sm:text-3xl">
+          &laquo;Ariel war ein unglaublicher Housesitter und sehr aufmerksam mit unserem Zuhause
+          und unseren Tieren. Können ihn nur weiterempfehlen!&raquo;
+        </blockquote>
+        <div>
+          <p class="font-medium">Ellie</p>
+          <p class="text-primary-300">Sheffield, UK · 13. Juli – 12. Aug. 2024</p>
+          <p
+            class="mt-3 inline-block rounded-full bg-primary-50 px-4 py-1.5 text-xs font-medium text-primary-950"
+          >
+            4 Wochen am Stück
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+    <div class="grid gap-10 lg:grid-cols-2">
+      <div>
+        <h2 class="text-3xl sm:text-4xl">Warum Katzen mein Schwerpunkt sind</h2>
+        <p class="mt-6 text-primary-700">
+          Ich bin mit Katzen aufgewachsen — sie waren schon immer Teil des Zuhauses. Auch wenn
+          engste Freunde eher Hunde hatten und ich bei Bedarf ebenfalls für sie da war, liegt
+          meine eigentliche Erfahrung bei Katzen: ihr Verhalten lesen, auch scheue Tiere zur Ruhe
+          bringen und einen Alltag ohne Stress für sie aufrechterhalten.
+        </p>
+        <p class="mt-4 text-primary-700">
+          Mein erstes Haustier war ein Deutscher-Schäferhund-Mix. Mit den Jahren kamen mehr Katzen
+          als Hunde dazu. Zuhause haben wir uns immer um Pflanzen und Tiere gleichermassen
+          gekümmert — diese Werte sind mir bis heute wichtig.
+        </p>
+      </div>
+      <div class="rounded-2xl bg-primary-100 p-8">
+        <h3 class="text-2xl">Über Ariel</h3>
+        <dl class="mt-6 space-y-4 text-primary-700">
+          <div class="flex justify-between border-b border-primary-300 pb-3">
+            <dt>Alter</dt>
+            <dd>41</dd>
+          </div>
+          <div class="flex justify-between border-b border-primary-300 pb-3">
+            <dt>Beruf</dt>
+            <dd>UX/UI Designer</dd>
+          </div>
+          <div class="flex justify-between border-b border-primary-300 pb-3">
+            <dt>Wohnort</dt>
+            <dd>Costa Brava, Spanien</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt>Sprachen</dt>
+            <dd>Englisch, Spanisch, Deutsch</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="bewertungen" class="border-t border-primary-200 bg-primary-100">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl">Verifizierte Bewertungen</h2>
+      <p class="mt-4 max-w-xl text-primary-700">
+        Jede Bewertung stammt von einem verifizierten Mitglied nach Abschluss des Sits, direkt
+        über TrustedHousesitters.
+      </p>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2">
+        {reviews.map((review) => <ReviewCard {...review} />)}
+      </div>
+
+      <div class="mt-10 rounded-2xl border border-primary-300 bg-white p-6">
+        <p class="text-sm font-medium tracking-wide text-primary-600 uppercase">
+          Referenz eines Freundes
+        </p>
+        <blockquote class="mt-3 text-lg text-primary-900">
+          &laquo;Ariel kümmert sich immer hervorragend um Robin, meinen verspielten und
+          freundlichen Hund. Er sorgt dafür, dass er genug Bewegung und Zuneigung bekommt, und
+          hält ihn stets gesund und glücklich. Ich werde ihn definitiv wieder anrufen!&raquo;
+        </blockquote>
+        <p class="mt-3 text-sm text-primary-600">Elm — Fürsorglich, Zuverlässig, Freundlich</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+    <div class="grid gap-10 lg:grid-cols-2">
+      <div>
+        <h2 class="text-3xl sm:text-4xl">Geprüft & verifiziert</h2>
+        <ul class="mt-6 space-y-3 text-primary-700">
+          <li class="flex items-center gap-3">
+            <span class="h-1.5 w-1.5 rounded-full bg-primary-950"></span>
+            Ausweis verifiziert
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="h-1.5 w-1.5 rounded-full bg-primary-950"></span>
+            E-Mail verifiziert
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="h-1.5 w-1.5 rounded-full bg-primary-950"></span>
+            Telefonnummer verifiziert
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="h-1.5 w-1.5 rounded-full bg-primary-950"></span>
+            Airbnb- & LinkedIn-Profil verknüpft
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-3xl sm:text-4xl">Reisebereitschaft</h2>
+        <p class="mt-6 text-primary-700">
+          Meine Basis ist die Costa Brava in Spanien. Für Sits in der ganzen Schweiz bin ich
+          reisebereit, sofern Anreise und Aufenthalt mit den Gastgebern gemeinsam organisiert
+          werden — besonders bei Aufenthalten ab einem Monat lohnt sich das für beide Seiten.
+        </p>
+        <p class="mt-4 text-primary-700">
+          Vor jedem Sit: Nachrichtenaustausch und ein Video-Call, damit wir uns kennenlernen,
+          bevor Sie sich entscheiden.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
