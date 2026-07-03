@@ -47,13 +47,13 @@ const reviews = [
   <Header />
 
   <section class="mx-auto max-w-5xl px-4 pt-16 pb-20 sm:px-6 sm:pt-24 sm:pb-28 lg:px-8">
-    <p class="font-medium tracking-wide text-primary-600 uppercase text-sm">
+    <p class="font-medium tracking-wide text-primary-600 uppercase text-sm dark:text-primary-400">
       Katzensitting Schweiz
     </p>
     <h1 class="mt-4 max-w-3xl text-4xl sm:text-6xl">
       Ihre Katzen zuhause, gut betreut — auch bei Aufenthalten von mehreren Wochen.
     </h1>
-    <p class="mt-6 max-w-xl text-lg text-primary-700">
+    <p class="mt-6 max-w-xl text-lg text-primary-700 dark:text-primary-300">
       Ich bin Ariel, verifizierter Housesitter mit 4 Jahren Erfahrung und Spezialisierung auf
       Katzen. 10 geprüfte Bewertungen, eine davon über einen vollen Monat — Kommunikation,
       Zuverlässigkeit und ein Zuhause, das genauso aussieht, wie Sie es verlassen haben.
@@ -61,39 +61,41 @@ const reviews = [
     <div class="mt-8 flex flex-wrap gap-3">
       <a
         href="#kontakt"
-        class="rounded-full bg-primary-950 px-6 py-3 text-sm font-medium text-primary-50 transition hover:bg-primary-800"
+        class="rounded-full bg-primary-950 px-6 py-3 text-sm font-medium text-primary-50 transition hover:bg-primary-800 dark:bg-primary-500 dark:text-primary-950 dark:hover:bg-primary-400"
       >
         Für Ihren Sit anfragen
       </a>
       <a
         href="#bewertungen"
-        class="rounded-full border border-primary-300 px-6 py-3 text-sm font-medium text-primary-800 transition hover:border-primary-950"
+        class="rounded-full border border-primary-300 px-6 py-3 text-sm font-medium text-primary-800 transition hover:border-primary-950 dark:border-primary-700 dark:text-primary-300 dark:hover:border-primary-50"
       >
         Bewertungen lesen
       </a>
     </div>
 
-    <dl class="mt-16 grid grid-cols-2 gap-8 border-t border-primary-200 pt-10 sm:grid-cols-4">
+    <dl
+      class="mt-16 grid grid-cols-2 gap-8 border-t border-primary-200 pt-10 sm:grid-cols-4 dark:border-primary-800"
+    >
       <div>
-        <dt class="text-sm text-primary-600">Erfahrung</dt>
+        <dt class="text-sm text-primary-600 dark:text-primary-400">Erfahrung</dt>
         <dd class="mt-1 text-2xl">4 Jahre</dd>
       </div>
       <div>
-        <dt class="text-sm text-primary-600">Verifizierte Bewertungen</dt>
+        <dt class="text-sm text-primary-600 dark:text-primary-400">Verifizierte Bewertungen</dt>
         <dd class="mt-1 text-2xl">10</dd>
       </div>
       <div>
-        <dt class="text-sm text-primary-600">Längster Sit</dt>
+        <dt class="text-sm text-primary-600 dark:text-primary-400">Längster Sit</dt>
         <dd class="mt-1 text-2xl">4 Wochen</dd>
       </div>
       <div>
-        <dt class="text-sm text-primary-600">Spezialisierung</dt>
+        <dt class="text-sm text-primary-600 dark:text-primary-400">Spezialisierung</dt>
         <dd class="mt-1 text-2xl">Katzen</dd>
       </div>
     </dl>
   </section>
 
-  <section class="bg-primary-950 text-primary-50">
+  <section class="bg-primary-950 text-primary-50 dark:bg-primary-900 dark:border-y dark:border-primary-800">
     <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <p class="text-sm font-medium tracking-wide text-primary-300 uppercase">
         Erfahrung mit längeren Aufenthalten
@@ -120,30 +122,30 @@ const reviews = [
     <div class="grid gap-10 lg:grid-cols-2">
       <div>
         <h2 class="text-3xl sm:text-4xl">Warum Katzen mein Schwerpunkt sind</h2>
-        <p class="mt-6 text-primary-700">
+        <p class="mt-6 text-primary-700 dark:text-primary-300">
           Ich bin mit Katzen aufgewachsen — sie waren schon immer Teil des Zuhauses. Auch wenn
           engste Freunde eher Hunde hatten und ich bei Bedarf ebenfalls für sie da war, liegt
           meine eigentliche Erfahrung bei Katzen: ihr Verhalten lesen, auch scheue Tiere zur Ruhe
           bringen und einen Alltag ohne Stress für sie aufrechterhalten.
         </p>
-        <p class="mt-4 text-primary-700">
+        <p class="mt-4 text-primary-700 dark:text-primary-300">
           Mein erstes Haustier war ein Deutscher-Schäferhund-Mix. Mit den Jahren kamen mehr Katzen
           als Hunde dazu. Zuhause haben wir uns immer um Pflanzen und Tiere gleichermassen
           gekümmert — diese Werte sind mir bis heute wichtig.
         </p>
       </div>
-      <div class="rounded-2xl bg-primary-100 p-8">
+      <div class="rounded-2xl bg-primary-100 p-8 dark:bg-primary-900">
         <h3 class="text-2xl">Über Ariel</h3>
-        <dl class="mt-6 space-y-4 text-primary-700">
-          <div class="flex justify-between border-b border-primary-300 pb-3">
+        <dl class="mt-6 space-y-4 text-primary-700 dark:text-primary-300">
+          <div class="flex justify-between border-b border-primary-300 pb-3 dark:border-primary-700">
             <dt>Alter</dt>
             <dd>41</dd>
           </div>
-          <div class="flex justify-between border-b border-primary-300 pb-3">
+          <div class="flex justify-between border-b border-primary-300 pb-3 dark:border-primary-700">
             <dt>Beruf</dt>
             <dd>UX/UI Designer</dd>
           </div>
-          <div class="flex justify-between border-b border-primary-300 pb-3">
+          <div class="flex justify-between border-b border-primary-300 pb-3 dark:border-primary-700">
             <dt>Wohnort</dt>
             <dd>Costa Brava, Spanien</dd>
           </div>
@@ -156,10 +158,13 @@ const reviews = [
     </div>
   </section>
 
-  <section id="bewertungen" class="border-t border-primary-200 bg-primary-100">
+  <section
+    id="bewertungen"
+    class="border-t border-primary-200 bg-primary-100 dark:border-primary-800 dark:bg-primary-900"
+  >
     <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <h2 class="text-3xl sm:text-4xl">Verifizierte Bewertungen</h2>
-      <p class="mt-4 max-w-xl text-primary-700">
+      <p class="mt-4 max-w-xl text-primary-700 dark:text-primary-300">
         Jede Bewertung stammt von einem verifizierten Mitglied nach Abschluss des Sits, direkt
         über TrustedHousesitters.
       </p>
@@ -167,16 +172,20 @@ const reviews = [
         {reviews.map((review) => <ReviewCard {...review} />)}
       </div>
 
-      <div class="mt-10 rounded-2xl border border-primary-300 bg-white p-6">
-        <p class="text-sm font-medium tracking-wide text-primary-600 uppercase">
+      <div
+        class="mt-10 rounded-2xl border border-primary-300 bg-white p-6 dark:border-primary-700 dark:bg-primary-950"
+      >
+        <p class="text-sm font-medium tracking-wide text-primary-600 uppercase dark:text-primary-400">
           Referenz eines Freundes
         </p>
-        <blockquote class="mt-3 text-lg text-primary-900">
+        <blockquote class="mt-3 text-lg text-primary-900 dark:text-primary-50">
           &laquo;Ariel kümmert sich immer hervorragend um Robin, meinen verspielten und
           freundlichen Hund. Er sorgt dafür, dass er genug Bewegung und Zuneigung bekommt, und
           hält ihn stets gesund und glücklich. Ich werde ihn definitiv wieder anrufen!&raquo;
         </blockquote>
-        <p class="mt-3 text-sm text-primary-600">Elm — Fürsorglich, Zuverlässig, Freundlich</p>
+        <p class="mt-3 text-sm text-primary-600 dark:text-primary-400">
+          Elm — Fürsorglich, Zuverlässig, Freundlich
+        </p>
       </div>
     </div>
   </section>
@@ -185,33 +194,33 @@ const reviews = [
     <div class="grid gap-10 lg:grid-cols-2">
       <div>
         <h2 class="text-3xl sm:text-4xl">Geprüft & verifiziert</h2>
-        <ul class="mt-6 space-y-3 text-primary-700">
+        <ul class="mt-6 space-y-3 text-primary-700 dark:text-primary-300">
           <li class="flex items-center gap-3">
-            <span class="h-1.5 w-1.5 rounded-full bg-primary-950"></span>
+            <span class="h-1.5 w-1.5 rounded-full bg-primary-950 dark:bg-primary-400"></span>
             Ausweis verifiziert
           </li>
           <li class="flex items-center gap-3">
-            <span class="h-1.5 w-1.5 rounded-full bg-primary-950"></span>
+            <span class="h-1.5 w-1.5 rounded-full bg-primary-950 dark:bg-primary-400"></span>
             E-Mail verifiziert
           </li>
           <li class="flex items-center gap-3">
-            <span class="h-1.5 w-1.5 rounded-full bg-primary-950"></span>
+            <span class="h-1.5 w-1.5 rounded-full bg-primary-950 dark:bg-primary-400"></span>
             Telefonnummer verifiziert
           </li>
           <li class="flex items-center gap-3">
-            <span class="h-1.5 w-1.5 rounded-full bg-primary-950"></span>
+            <span class="h-1.5 w-1.5 rounded-full bg-primary-950 dark:bg-primary-400"></span>
             Airbnb- & LinkedIn-Profil verknüpft
           </li>
         </ul>
       </div>
       <div>
         <h2 class="text-3xl sm:text-4xl">Reisebereitschaft</h2>
-        <p class="mt-6 text-primary-700">
+        <p class="mt-6 text-primary-700 dark:text-primary-300">
           Meine Basis ist die Costa Brava in Spanien. Für Sits in der ganzen Schweiz bin ich
           reisebereit, sofern Anreise und Aufenthalt mit den Gastgebern gemeinsam organisiert
           werden — besonders bei Aufenthalten ab einem Monat lohnt sich das für beide Seiten.
         </p>
-        <p class="mt-4 text-primary-700">
+        <p class="mt-4 text-primary-700 dark:text-primary-300">
           Vor jedem Sit: Nachrichtenaustausch und ein Video-Call, damit wir uns kennenlernen,
           bevor Sie sich entscheiden.
         </p>

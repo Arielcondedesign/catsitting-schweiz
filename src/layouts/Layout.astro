@@ -15,6 +15,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const isDark = stored ? stored === "dark" : prefersDark;
+        document.documentElement.classList.toggle("dark", isDark);
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
@@ -34,7 +42,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <body class="min-h-screen antialiased">
     <a
       href="#main"
-      class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-primary-950 focus:text-white focus:px-4 focus:py-2 focus:rounded"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-primary-950 focus:text-white focus:px-4 focus:py-2 focus:rounded dark:focus:bg-primary-50 dark:focus:text-primary-950"
     >
       Zum Inhalt springen
     </a>

@@ -1,17 +1,21 @@
 ---
+import ThemeToggle from "./ThemeToggle.astro";
 ---
 
-<header class="border-b border-primary-200">
+<header class="border-b border-primary-200 dark:border-primary-800">
   <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
     <a href="/" class="flex items-center gap-3">
       <img src="/assets/logo.svg" alt="Ariel C_ND_" class="h-6 w-auto" width="264" height="32" />
       <span class="sr-only">Katzensitting Schweiz — Ariel</span>
     </a>
-    <a
-      href="#kontakt"
-      class="rounded-full bg-primary-950 px-5 py-2.5 text-sm font-medium text-primary-50 transition hover:bg-primary-800"
-    >
-      Kontakt aufnehmen
-    </a>
+    <div class="flex items-center gap-3">
+      <ThemeToggle />
+      <a
+        href="#kontakt"
+        class="rounded-full bg-primary-950 px-5 py-2.5 text-sm font-medium text-primary-50 transition hover:bg-primary-800 dark:bg-primary-500 dark:text-primary-950 dark:hover:bg-primary-400"
+      >
+        Kontakt aufnehmen
+      </a>
+    </div>
   </div>
 </header>
