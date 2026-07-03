@@ -12,9 +12,23 @@ import ThemeToggle from "./ThemeToggle.astro";
       <ThemeToggle />
       <a
         href="#kontakt"
-        class="rounded-full bg-primary-950 px-5 py-2.5 text-sm font-medium text-primary-50 transition hover:bg-primary-800 dark:bg-primary-50 dark:text-primary-950 dark:hover:bg-primary-200"
+        aria-label="Kontakt aufnehmen"
+        class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-950 text-primary-50 transition hover:bg-primary-800 sm:h-auto sm:w-auto sm:gap-2 sm:px-5 sm:py-2.5 dark:bg-primary-50 dark:text-primary-950 dark:hover:bg-primary-200"
       >
-        Kontakt aufnehmen
+        <svg
+          class="h-5 w-5 sm:hidden"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"></path>
+          <polyline points="22 6 12 13 2 6"></polyline>
+        </svg>
+        <span class="hidden text-sm font-medium sm:inline">Kontakt aufnehmen</span>
       </a>
     </div>
   </div>
